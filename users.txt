@@ -1,0 +1,27 @@
+INSERT INTO users (first_name, last_name, email, password, created_at, updated_at)
+VALUES ('Nick', 'Chambers', 'nchambers@gmail.com', 'password', NOW(), NOW()),
+		('Nolan', 'Kozu', 'nkozu@comcast.net', 'password', NOW(), NOW()),
+        ('John', 'Doe', 'jdoe@hotmail.com', 'password', NOW(), NOW());
+        
+SELECT * FROM users;
+
+SELECT * FROM users
+WHERE email LIKE '%ch%';
+
+SELECT * FROM users
+WHERE id = 3;
+
+UPDATE user.users 
+SET last_name = 'Pancakes', updated_at = NOW()
+WHERE id = 3;
+
+SET SQL_SAFE_UPDATES = 0;
+ 
+DELETE FROM users 
+WHERE  id=2;
+
+SELECT * FROM users
+ORDER BY first_name;
+
+SELECT * FROM users
+ORDER BY first_name DESC;
